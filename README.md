@@ -325,6 +325,7 @@ The following constants are available on the `RNFS` export:
 
 - `MainBundlePath` (`String`) The absolute path to the main bundle directory (not available on Android)
 - `CachesDirectoryPath` (`String`) The absolute path to the caches directory
+- `ExternalCachesDirectoryPath` (`String`) The absolute path to the external caches directory (android only)
 - `DocumentDirectoryPath`  (`String`) The absolute path to the document directory
 - `TemporaryDirectoryPath` (`String`) The absolute path to the temporary directory (falls back to Caching-Directory on Android)
 - `LibraryDirectoryPath` (`String`) The absolute path to the NSLibraryDirectory (iOS only)
@@ -654,7 +655,7 @@ type FSInfoResult = {
 
 ### `getAllExternalFilesDirs(): Promise<string>`
 
-Returns an array with the absolute paths to application-specific directories on all shared/external storage devices where the application can place persistent files it owns. 
+Returns an array with the absolute paths to application-specific directories on all shared/external storage devices where the application can place persistent files it owns.
 
 ### (iOS only) `pathForGroup(groupIdentifier: string): Promise<string>`
 
